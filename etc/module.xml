@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+ * Celebros
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish correct extension functionality.
+ * If you wish to customize it, please contact Celebros.
+ *
+ ******************************************************************************
+ * @category    Celebros
+ * @package     Celebros_ConflictFixer
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Celebros_ConflictFixer" setup_version="0.9.0">
+        <sequence>
+            <module name="Celebros_Main" />
+            <module name="Celebros_ConversionPro" />
+            <module name="Amasty_Shopby" />
+        </sequence>    
+    </module>
+    <module name="Celebros_ConversionPro">
+        <sequence>
+            <module name="Amasty_Shopby" />
+        </sequence> 
+    </module>
+</config>

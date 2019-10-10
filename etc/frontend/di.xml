@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+ * Celebros
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish correct extension functionality.
+ * If you wish to customize it, please contact Celebros.
+ *
+ ******************************************************************************
+ * @category    Celebros
+ * @package     Celebros_ConflictFixer
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="categoryFilterList" type="Amasty\Shopby\Model\Layer\FilterList">
+        <arguments>
+            <argument name="filters" xsi:type="array">
+                <item name="attribute" xsi:type="string">Amasty\Shopby\Model\Layer\Filter\Attribute</item>
+                <item name="price" xsi:type="string">Amasty\Shopby\Model\Layer\Filter\Price</item>
+                <item name="decimal" xsi:type="string">Amasty\Shopby\Model\Layer\Filter\Decimal</item>
+                <item name="category" xsi:type="string">Amasty\Shopby\Model\Layer\Filter\Category</item>
+            </argument>
+            <argument name="place" xsi:type="string">sidebar</argument>
+        </arguments>
+    </virtualType>
+    <preference for="Magento\Catalog\Model\Layer\Search" type="Celebros\ConversionPro\Model\Catalog\Layer\Search" />
+    <virtualType name="searchFilterList" type="Celebros\ConversionPro\Model\Catalog\Layer\Search\FilterList">
+        <arguments>
+            <argument name="filterableAttributes" xsi:type="object">Magento\Catalog\Model\Layer\Search\FilterableAttributeList</argument>
+        </arguments>
+    </virtualType>
+    <preference for="Magento\CatalogSearch\Model\Search\RequestGenerator" type="Celebros\ConversionPro\Model\CatalogSearch\Search\RequestGenerator" />
+    <preference for="Magento\Search\Model\AdapterFactory" type="Celebros\ConversionPro\Model\Search\AdapterFactory" />
+    <preference for="Magento\Catalog\Block\Product\ProductList\Toolbar" type="Celebros\ConversionPro\Block\Catalog\Product\ProductList\Toolbar" />
+    <preference for="Magento\Theme\Block\Html\Pager" type="Celebros\ConversionPro\Block\Theme\Html\Pager" />
+    <preference for="Magento\CatalogSearch\Model\ResourceModel\Fulltext\Collection" type="Celebros\ConversionPro\Model\ResourceModel\CatalogSearch\Fulltext\Collection" />
+    <preference for="Magento\Catalog\Model\ResourceModel\Fulltext\Collection" type="Celebros\ConversionPro\Model\ResourceModel\Catalog\Fulltext\Collection" />
+    <preference for="Magento\CatalogStaging\Model\ResourceModel\Fulltext\Collection" type="Celebros\ConversionPro\Model\ResourceModel\Catalog\Fulltext\Collection" />
+    <preference for="Magento\Catalog\Model\Layer\Filter\Item" type="Celebros\ConversionPro\Model\Catalog\Layer\Filter\Item" />
+    <preference for="Magento\Checkout\Block\Cart\Crosssell" type="Celebros\ConversionPro\Block\Checkout\Cart\Crosssell" />
+    <preference for="Magento\Catalog\Block\Product\ProductList\Upsell" type="Celebros\ConversionPro\Block\Catalog\Product\ProductList\Upsell" />
+    <preference for="Magento\TargetRule\Block\Catalog\Product\ProductList\Upsell" type="Celebros\ConversionPro\Block\TargetRule\Catalog\Product\ProductList\Upsell" />
+</config>
