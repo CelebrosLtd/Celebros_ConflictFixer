@@ -19,9 +19,4 @@
             <module name="Amasty_Shopby" />
         </sequence>    
     </module>
-    <module name="Celebros_ConversionPro">
-        <sequence>
-            <module name="Amasty_Shopby" />
-        </sequence> 
-    </module>
 </config>
