@@ -17,5 +17,8 @@
         <referenceBlock name="catalog.navigation.swatches.choose" remove="true"/>
         <referenceBlock name="amasty.shopby.applybutton.sidebar" remove="true"/>
         <referenceBlock name="category.amshopby.ajax" remove="true"/>
+        <referenceBlock name="celebros.catalogsearch.leftnav">
+            <block class="Celebros\ConflictFixer\Block\LayeredNavigation\Navigation\State" name="celebros.catalogsearch.navigation.state" as="state"/>
+        </referenceBlock>
     </body>
 </page>
