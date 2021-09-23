@@ -12,9 +12,8 @@
  * @package     Celebros_ConflictFixer
  -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Celebros_ConflictFixer" setup_version="0.9.3">
+    <module name="Celebros_ConflictFixer" setup_version="0.9.4">
         <sequence>
-            <module name="Celebros_Main" />
             <module name="Celebros_ConversionPro" />
             <module name="Amasty_Shopby" />
         </sequence>    

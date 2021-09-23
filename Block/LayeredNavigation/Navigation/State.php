@@ -1,5 +1,6 @@
 <?php
-/*
+
+/**
  * Celebros
  *
  * DISCLAIMER
@@ -11,6 +12,7 @@
  * @category    Celebros
  * @package     Celebros_ConflictFixer
  */
+
 namespace Celebros\ConflictFixer\Block\LayeredNavigation\Navigation;
 
 class State extends \Magento\LayeredNavigation\Block\Navigation\State
